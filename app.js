@@ -6,8 +6,10 @@ const cb = document.querySelector("#cb");
 const cc = document.querySelector("#cc");
 const cd = document.querySelector("#cd");
 const cr = document.querySelector("#cr");
+const counter = document.querySelector("#sayi");
 
 let str = "";
+let count = 0;
 
 function my_download(filename, text)
 {
@@ -117,6 +119,8 @@ btn.addEventListener("click", (e) => {
     str += "@";
     console.log(str);
     alert("Soru eklendi");
+    count = count + 1;
+    counter.innerHTML = "Soru sayisi: " + count;
    //my_download("hello.sc", "world");
 });
 
